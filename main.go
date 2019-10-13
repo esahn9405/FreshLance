@@ -15,16 +15,24 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/choose", http.StatusFound)
 }
 
-func portfolioHandler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "/portfolio/0", http.StatusFound)
+func hirePortfolioHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/hire.html")
+}
+
+func isaacHirePortfolioHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/isaac_hire_portfolio.html")
+}
+
+func workPortfolioHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/work/portfolio/0", http.StatusFound)
+}
+
+func isaacWorkPortfolioHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/work_portfolio.html")
 }
 
 func resumeHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/resume.pdf")
-}
-
-func isaacPortfolioHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "templates/portfolio.html")
 }
 
 func choiceHandler(w http.ResponseWriter, r *http.Request) {
@@ -37,8 +45,10 @@ func main() {
 	r.HandleFunc("/", homeHandler)
 	r.HandleFunc("/login", loginHandler)
 	r.HandleFunc("/resume", resumeHandler)
-	r.HandleFunc("/portfolio", portfolioHandler)
-	r.HandleFunc("/portfolio/0", isaacPortfolioHandler)
+	r.HandleFunc("/hire/portfolio", hirePortfolioHandler)
+	r.HandleFunc("/hire/portfolio/0", isaacHirePortfolioHandler)
+	r.HandleFunc("/work/portfolio", workPortfolioHandler)
+	r.HandleFunc("/work/portfolio/0", isaacWorkPortfolioHandler)
 	r.HandleFunc("/choose", choiceHandler)
 	r.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", http.FileServer(http.Dir("templates/assets/"))))
 	r.PathPrefix("/images/").Handler(http.StripPrefix("/images/", http.FileServer(http.Dir("templates/images/"))))
