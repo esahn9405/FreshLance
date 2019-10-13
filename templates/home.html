@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>FreshLance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body,h1 {font-family: "Raleway", sans-serif}
+    body, html {height: 100%}
+    .bgimg {
+        background-image: url('images/work2.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    /* Bordered form */
+    form {
+        border: 3px solid #f1f1f1;
+    }
+
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    /* Set a style for all buttons */
+    button {
+        background-color: mediumpurple;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    /* Add a hover effect for buttons */
+    button:hover {
+        opacity: 0.8;
+    }
+
+    /* Avatar image */
+    img.avatar {
+        width: 40%;
+        border-radius: 50%;
+    }
+
+    /* Add padding to containers */
+    .container {
+        padding: 16px;
+    }
+
+    /* Extra style for the cancel button (red) */
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: mediumpurple;
+    }
+
+    /* The "Forgot password" text */
+    span.psw {
+        float: right;
+        padding-top: 1px;
+    }
+
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+    }
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div class="w3-display-topleft w3-padding-large w3-xlarge">
+        <img src="images/logo2.jpg" style="mix-blend-mode: multiply"/>
+    </div>
+    <div class="w3-display-topright w3-padding-large"><button type="button" class="cancelbtn">Sign Up</button></div>
+    <div class="w3-display-middle" style="background-color:white;color:black">
+        <form action="action_page.php" method="post">
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+
+        </form>
+    </div>
+    <div class="w3-display-bottomleft w3-padding-large" style="color:white">
+        Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">FreshLance</a>
+    </div>
+</div>
+
+</body>
+</html>
