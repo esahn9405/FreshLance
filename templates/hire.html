@@ -22,6 +22,8 @@
         .topnav {
             overflow: hidden;
             position: fixed;
+            top: 0;
+            width: 100%;
             z-index: 999;
             background-color: #e9e9e9;
         }
@@ -91,22 +93,20 @@
             }
         }
     </style>
-</head>
-<body>
 
-<div id="searchBar" class="topnav">
-    <a class="active" href="/choose">Home</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <div class="search-container">
-        <form action="/action_page.php">
-            <input type="text" placeholder="Search FreshLancers.." name="search" style="width:700px">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
+
+    <div id="searchBar" class="topnav" style="margin-top:0;padding-top:0;border-top:0;position:fixed">
+        <a class="active" href="/choose">Home</a>
+        <a href="#about">Post</a>
+        <a href="#contact">Contact</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search FreshLancers.." name="search" style="width:700px">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
     </div>
-</div>
-
-</body>
+</head>
 
 <title>Hire Home</title>
 <meta charset="UTF-8">
@@ -119,10 +119,11 @@
         font-family: "Raleway", sans-serif
     }
 </style>
+
+
 <body class="w3-light-grey w3-content" style="max-width:1600px">
-<div class="w3-container w3-padding-large">
-    <h3 id="recommendation"><b>Recommendations For You</b></h3>
-</div>
+
+<div style="padding-top:70px; padding-left: 10px"><h3><b>Recommended</b></h3></div>
 
 <!-- First Photo Grid-->
 <div class="w3-row-padding">
@@ -132,8 +133,7 @@
         <div class="w3-container w3-white">
             <p><b>Isaac Ahn</b></p>
             <p>I'm a Master's student at University of Washington. I will be graduating December, 2019. I major in CS
-                and I
-                have proficiency in Data Engineering...</p>
+                and I have proficiency in Data Engineering...</p>
         </div>
     </div>
     <div class="w3-quarter w3-container w3-hover-opacity" onmouseover="" style="cursor: pointer;">
@@ -311,7 +311,7 @@
     };
 
     var header = document.getElementById("searchBar");
-    var sticky = 0;
+    var sticky = header.offsetTop;
 
     function stickFunction() {
         if (window.pageYOffset > sticky) {
