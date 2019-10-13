@@ -17,7 +17,7 @@
         <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
             <i class="fa fa-remove"></i>
         </a>
-        <img src="images/isaac.jpg" style="width:45%;" class="w3-round"><br><br>
+        <img src="/images/isaac.jpg" style="width:45%;" class="w3-round"><br><br>
         <h4><b>Isaac Ahn</b></h4>
         <p class="w3-text-grey">Pursuing Degree: Master's</p>
         <p class="w3-text-grey">School: University of Washington</p>
@@ -35,7 +35,7 @@
         <i class="fa fa-snapchat w3-hover-opacity"></i>
         <i class="fa fa-pinterest-p w3-hover-opacity"></i>
         <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity" onclick="location.href='https://www.linkedin.com/in/isaac-ahn'" onmouseover="" style="cursor: pointer;"></i>
     </div>
 </nav>
 
@@ -47,27 +47,29 @@
 
     <!-- Header -->
     <header id="portfolio">
-        <a href="#"><img src="images/isaac.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+        <a href="#"><img src="/images/isaac.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
         <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
         <div class="w3-container">
             <h1><b>Isaac Ahn</b></h1>
+            <!--
             <div class="w3-section w3-bottombar w3-padding-16">
                 <span class="w3-margin-right">Filter:</span>
                 <button class="w3-button w3-black">ALL</button>
-                <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
+                <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Technical</button>
                 <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
                 <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
             </div>
+            -->
         </div>
     </header>
 
     <!-- Images of Me -->
     <div class="w3-row-padding w3-padding-16" id="about">
         <div class="w3-col m6">
-            <img src="images/avatar_g2.jpg" alt="Me" style="width:100%">
+            <img src="/images/isaac2.jpg" alt="Me" style="width:100%">
         </div>
         <div class="w3-col m6">
-            <img src="images/avatar_g2.jpg" alt="Me" style="width:100%">
+            <img src="/images/isaac1.jpg" alt="Me" style="width:100%">
         </div>
     </div>
 
@@ -159,19 +161,19 @@
         <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
             <div class="w3-third w3-dark-grey">
                 <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-                <p>email@email.com</p>
+                <p>isaac.ahn96@gmail.com</p>
             </div>
             <div class="w3-third w3-teal">
                 <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-                <p>Chicago, US</p>
+                <p>Seattle, US</p>
             </div>
             <div class="w3-third w3-dark-grey">
                 <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-                <p>512312311</p>
+                <p>(Private)</p>
             </div>
         </div>
         <hr class="w3-opacity">
-        <form action="/action_page.php" target="_blank">
+        <form action="/portfolio/0" target="_blank">
             <div class="w3-section">
                 <label>Name</label>
                 <input class="w3-input w3-border" type="text" name="Name" required>
@@ -184,8 +186,8 @@
                 <label>Message</label>
                 <input class="w3-input w3-border" type="text" name="Message" required>
             </div>
-            <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
         </form>
+        <button type="submit" class="w3-button w3-black w3-margin-bottom" onclick="myFunction()"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
     </div>
 
     <!-- Footer -->
@@ -201,12 +203,12 @@
                 <h3>BLOG POSTS</h3>
                 <ul class="w3-ul w3-hoverable">
                     <li class="w3-padding-16">
-                        <img src="images/avatar_g2.jpg" class="w3-left w3-margin-right" style="width:50px">
+                        <img src="/images/avatar_g2.jpg" class="w3-left w3-margin-right" style="width:50px">
                         <span class="w3-large">Lorem</span><br>
                         <span>Sed mattis nunc</span>
                     </li>
                     <li class="w3-padding-16">
-                        <img src="images/avatar_g2.jpg" class="w3-left w3-margin-right" style="width:50px">
+                        <img src="/images/avatar_g2.jpg" class="w3-left w3-margin-right" style="width:50px">
                         <span class="w3-large">Ipsum</span><br>
                         <span>Praes tinci sed</span>
                     </li>
@@ -234,21 +236,21 @@
     <!-- First Photo Grid-->
     <div class="w3-row-padding">
         <div class="w3-third w3-container w3-margin-bottom">
-            <img src="images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <img src="/images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
                 <p><b>Lorem Ipsum</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
             </div>
         </div>
         <div class="w3-third w3-container w3-margin-bottom">
-            <img src="images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <img src="/images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
                 <p><b>Lorem Ipsum</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
             </div>
         </div>
         <div class="w3-third w3-container">
-            <img src="images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <img src="/images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
                 <p><b>Lorem Ipsum</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
@@ -259,21 +261,21 @@
     <!-- Second Photo Grid-->
     <div class="w3-row-padding">
         <div class="w3-third w3-container w3-margin-bottom">
-            <img src="images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <img src="/images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
                 <p><b>Lorem Ipsum</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
             </div>
         </div>
         <div class="w3-third w3-container w3-margin-bottom">
-            <img src="images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <img src="/images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
                 <p><b>Lorem Ipsum</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
             </div>
         </div>
         <div class="w3-third w3-container">
-            <img src="images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+            <img src="/images/avatar_g2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
                 <p><b>Lorem Ipsum</b></p>
                 <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
@@ -311,5 +313,63 @@
     }
 </script>
 
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
+
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+
+        @-webkit-keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
+    </style>
+</head>
+
+<div id="snackbar">Your request has been sent.</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+</script>
+
 </body>
+
 </html>
