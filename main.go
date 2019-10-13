@@ -38,6 +38,12 @@ func resumeHandler(w http.ResponseWriter, r *http.Request) {
 func choiceHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/choice.html")
 }
+func updateProfileHandler(w http.ResponseWriter, r *http.Request) {
+	http.Redirect(w, r, "/work/update/0", http.StatusFound)
+}
+func updateProfileNumHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/update_profile" + mux.Vars(r)["num"] + ".html")
+}
 
 func main() {
 	// Set up router
@@ -48,6 +54,8 @@ func main() {
 	r.HandleFunc("/hire", hirePortfolioHandler)
 	r.HandleFunc("/hire/portfolio/0", isaacHirePortfolioHandler)
 	r.HandleFunc("/work", workPortfolioHandler)
+	r.HandleFunc("/work/update", updateProfileHandler)
+	r.HandleFunc("/work/update/{num}", updateProfileNumHandler)
 	r.HandleFunc("/work/portfolio/0", isaacWorkPortfolioHandler)
 	r.HandleFunc("/choose", choiceHandler)
 	r.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", http.FileServer(http.Dir("templates/assets/"))))
