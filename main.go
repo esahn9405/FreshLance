@@ -44,6 +44,9 @@ func updateProfileHandler(w http.ResponseWriter, r *http.Request) {
 func updateProfileNumHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/update_profile" + mux.Vars(r)["num"] + ".html")
 }
+func supportHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/support.html")
+}
 
 func main() {
 	// Set up router
@@ -58,6 +61,7 @@ func main() {
 	r.HandleFunc("/work/update/{num}", updateProfileNumHandler)
 	r.HandleFunc("/work/portfolio/0", isaacWorkPortfolioHandler)
 	r.HandleFunc("/choose", choiceHandler)
+	r.HandleFunc("/support", supportHandler)
 	r.PathPrefix("/assets/").Handler(http.StripPrefix("/assets/", http.FileServer(http.Dir("templates/assets/"))))
 	r.PathPrefix("/images/").Handler(http.StripPrefix("/images/", http.FileServer(http.Dir("templates/images/"))))
 
