@@ -19,6 +19,10 @@ func portfolioHandler(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/portfolio/0", http.StatusFound)
 }
 
+func resumeHandler(w http.ResponseWriter, r *http.Request) {
+	http.ServeFile(w, r, "templates/resume.pdf")
+}
+
 func isaacPortfolioHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "templates/portfolio.html")
 }
@@ -32,6 +36,7 @@ func main() {
 	r := mux.NewRouter()
 	r.HandleFunc("/", homeHandler)
 	r.HandleFunc("/login", loginHandler)
+	r.HandleFunc("/resume", resumeHandler)
 	r.HandleFunc("/portfolio", portfolioHandler)
 	r.HandleFunc("/portfolio/0", isaacPortfolioHandler)
 	r.HandleFunc("/choose", choiceHandler)
