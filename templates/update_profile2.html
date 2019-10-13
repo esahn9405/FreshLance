@@ -95,39 +95,34 @@
         <img src="/images/logo2.jpg" style="mix-blend-mode: multiply"/>
     </div>
     <div class="w3-display-middle" style="background-color:white;color:black">
-        <form action="/work/update/1" method="post">
+        <form action="/work/update/3" method="post">
             <div class="container">
-                <label for="uname"><b>Name</b></label>
-                <input type="text" placeholder="Your Name" name="uname" required>
+                <label for="resume"><b>Resume Upload (optional)</b></label>
+                <input type="file" name="resume" accept="*" style="margin-left:30px">
                 <br/>
                 <br/>
 
-                <label for="school"><b>School</b></label>
-                <input type="text" placeholder="School Attending" name="school" required>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Optional. e.g. john.doe@email.com" name="email">
                 <br/>
                 <br/>
 
-                <label for="degree"><b>Current Degree Pursued</b></label><br/>
-                <select name="degree" required>
-                    <option value="bs">Bachelor</option>
-                    <option value="ms">Master</option>
-                    <option value="phd">Ph.D.</option>
-                    <option value="hs">High School</option>
-                </select>
-
+                <label for="phone"><b>Phone</b></label>
+                <input type="text" placeholder="Optional. e.g. (+1) 999-999-9999" name="phone">
                 <br/>
                 <br/>
 
-
-                <label for="major"><b>Major</b></label>
-                <input type="text" placeholder="Major (optional)" name="major">
+                <label for="location"><b>Location</b></label>
+                <input type="text" placeholder="Optional. e.g. Seattle, WA" name="location">
                 <br/>
                 <br/>
 
-                <label for="gpa"><b>GPA</b></label>
-                <input type="text" placeholder="GPA (optional)" name="gpa">
+
+                <label for="tags"><b>Tags</b></label>
+                <input type="text" placeholder="Comma separated tags to find you. e.g. Java, C++, Python" name="tags">
                 <br/>
                 <br/>
+
                 <button type="submit">Next</button>
             </div>
         </form>
